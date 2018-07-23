@@ -32,7 +32,7 @@ if (!process.env.GITHUB_CLIENT_ID || !process.env.GITHUB_CLIENT_SECRET) {
     (token, refreshToken, profile, done) => {
       const githubId = profile.id
       const name = profile.displayName
-      const email = profile.name + '@vassar.edu'
+      const email = profile.username + '@vassar.edu'
 
       User.findOrCreate({
         where: {githubId},
