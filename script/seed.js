@@ -12,9 +12,10 @@ async function seed() {
     User.create({email: 'murphy@email.com', password: '123'})
   ])
   console.log(`seeded ${users.length} users`)
-  console.log(`~~~~~~~~~~~~~~~~~~
-               seeded successfully
-               ~~~~~~~~~~~~~~~~~~~`)
+  console.log(`
+  ~~~~~~~~~~~~~~~~~~
+  seeded successfully
+  ~~~~~~~~~~~~~~~~~~~`)
 }
 
 async function runSeed() {
