@@ -97,11 +97,11 @@ const createApp = () => {
 const startListening = () => {
   // start listening (and create a 'server' object representing our server)
   const server = app.listen(PORT, () =>
-    console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                  Listening on PORT: ${PORT} ...
-                  http://localhost:${PORT}
-
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`)
+    console.log(`
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Listening on PORT: ${PORT} ...
+    http://localhost:${PORT}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`)
   )
 
   // set up our socket control center
