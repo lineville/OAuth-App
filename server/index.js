@@ -99,7 +99,9 @@ const startListening = () => {
   const server = app.listen(PORT, () =>
     console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                   Listening on PORT: ${PORT} ...
-                  http://localhost:${PORt} `)
+                  http://localhost:${PORT}
+
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`)
   )
 
   // set up our socket control center
