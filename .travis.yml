@@ -16,12 +16,12 @@ install:
 before_script:
   - psql -c 'create database "OAuth-App-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
 
-# before_deploy:
-#   - npm run build-client # make the bundle
-#   - rm -rf node_modules # omit from the tarball, since we skip cleanup
-# deploy:
-#   skip_cleanup: true # prevents travis from deleting the build
-#   provider: heroku
-#   app: YOUR-HEROKU-APP-NAME-HERE # see README
-#   api_key:
-#     secure: YOUR-***ENCRYPTED***-API-KEY-HERE # see README
+before_deploy:
+  - npm run build-client # make the bundle
+  - rm -rf node_modules # omit from the tarball, since we skip cleanup
+deploy:
+  skip_cleanup: true # prevents travis from deleting the build
+  provider: heroku
+  app: tranquil-earth-31893 # see README
+  api_key:
+    secure: "mz3KG+JDf/VnSgnGyVMBIorn+Je5m+0l71u9Z11/4kbr40eWPvA8IT1HCTbCI0xGewzxQlFvCEA2+zAkKrAQRbVvsais5yjh8uP6kdkjImQNP81zlsnq19ppnhVzfFamjZytlVlNsPdQTYXUMfBjzYXWhlkTyIlwN/ZudfvnAA63yEhz3MZJJ+/nG7ZGqygQ9gb+ez9Paqiie+vYi/pk4LEAfyc7Ysz3PqDcWn7NwIEPTUbi5MsBf+lcZ7ycPZ6kyLSybMBJXz4nsrjFCkPXQLVXur3flT1PtERBs98SBp+G/auqfYUDbtah/G1mdnnnZxEti5G/AxPlD1PIuyKKD+WfHv6njE3e//ooTcxZKaDc/PlhlCH0hUxXN4Rrr3hAMzaBrD7u0vJlPku6E2xYizVHQ1ryJrmugN5hdZrORErTBuxsQZ4pYVX14MQewxA6qyiVkFRCFgyssRKQfqAb3O75aBpavQI7ew2UUJhyYXFGMnvaZQ5TGaKwhscwt7Vebt0ZjWD77hf7dH7CNpm4eX572gTue5G9uGJfnpy9tTkWKS/Zy4xhEOEj6eSYqn3aQr9QPEP/+V3BED1ttyo/pN8t/2yfMmE3+sWbTZbGgb1ef5XfccYvy4bkkM8OKp75F/zqAudNUZ4mvh/k/G/9m1zZFDPysHReG7fUSiUCd/0=" # see README
